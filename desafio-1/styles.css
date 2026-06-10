@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /*border: red 1px solid;
+    */
+}
+
+:root {
+    --brand-color: #e07b67;
+
+    --dark-10: #121214;
+    --dark-20: #17171a;
+    --dark-30: #202024;
+    --dark-40: #252529;
+
+    --gray: #AFABB6;
+    --white: #ffffff;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--dark-10);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.header {
+    background-color: var(--dark-20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+    height: 283px;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 40px;
+    color: var(--brand-color);
+    font-weight: 500;
+}
+
+#lab {
+    color: var(--white);
+}
+
+#search {
+    margin: 16px 24px 16px 24px;
+    height: 56px;
+    width: 70%;
+    background-color: var(--dark-30);
+    border: var(--dark-40) 1px solid;
+    border-radius: 6px;
+    color: var(--gray);
+    font-size: 20px;
+    padding: 0 16px;
+    font-weight: 500;
+    outline: none;
+}
+
+#search:focus {
+
+    border-color: #ff7b23dc;
+    /* Muda a cor da borda */
+    box-shadow: 0 0 8px rgba(255, 104, 45, 0.651);
+    /* Adiciona um efeito de brilho */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+p.postDate {
+    color: var(--brand-color);
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 56px;
+}
+
+#icon {
+    width: 32px;
+    height: 32px;
+    align-self: flex-end;
+    margin-top: -50px;
+    fill: #17171A;
+    stroke: #E07B67;
+    stroke-width: 7;
+    transition: fill 0.3s;
+    cursor: pointer;
+}
+
+#icon.filled {
+    fill: #E07B67;
+}
+
+#icon:hover {
+    fill: #E07B67;
+}
+
+.post {
+    width: 70%;
+    height: 248px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    background-color: var(--dark-20);
+    border-radius: 6px;
+}
+
+.post:hover {
+    border: var(--brand-color) 1px solid;
+    box-shadow: 0 0 8px rgba(224, 123, 103, 0.3);
+    transform: translateY(-4px);
+    transition: transform 0.3s ease;
+
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Tablets e Celulares)
+   ========================================================================== */
+
+/* 📱 TABLETS (Telas até 992px) */
+@media (max-width: 992px) {
+    .header {
+        height: auto;
+        /* Permite que o header cresça se o texto quebrar */
+        padding: 40px 24px;
+    }
+
+    #search,
+    .post {
+        width: 85%;
+        /* Aumenta a largura para aproveitar melhor o espaço */
+    }
+
+    .post {
+        height: auto;
+        /* Evita que o texto transborde se o título for longo */
+    }
+}
+
+/* 📱 CELULARES (Telas até 576px) */
+@media (max-width: 576px) {
+    .header {
+        gap: 24px;
+        /* Diminui o espaçamento no topo */
+    }
+
+    h1 {
+        font-size: 28px;
+        /* Texto menor para não quebrar feio no celular */
+        text-align: center;
+    }
+
+    #search,
+    .post {
+        width: 100%;
+        /* Ocupa toda a largura disponível */
+    }
+
+    #search {
+        margin: 0;
+        /* Remove as margens laterais fixas que quebravam o layout */
+        font-size: 16px;
+        /* Ajusta tamanho do texto de busca */
+    }
+
+    main {
+        padding: 24px 16px;
+        /* Diminui o recuo das laterais da tela */
+        gap: 24px;
+        /* Posts ficam um pouco mais próximos */
+    }
+
+    .post {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    p.postDate {
+        margin-right: 0;
+        /* Remove a margem grande para a data não esmagar outros itens */
+        display: block;
+        /* Joga itens adjacentes para baixo se não couberem */
+        margin-bottom: 8px;
+    }
+
+    #icon {
+
+        /* Reposiciona o ícone de favorito no mobile */
+        margin-top: 0;
+    }
+}
