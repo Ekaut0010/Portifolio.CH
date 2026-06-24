@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap");
+
+:root {
+    --brand-color: #7ca2f4;
+    --dark: #121214;
+    --gray: #f3f7ff;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Archivo", sans-serif;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frete {
+    width: 100%;
+    min-height: 64px;
+    background: var(--gray);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+    text-align: center;
+    padding: 0 16px;
+}
+
+.banner {
+    width: 100%;
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--white);
+
+    background-image: url("/desafio-2/img/image-michael-jordan.png");
+    background-size: cover;
+    background-position: top;
+}
+
+.jordan {
+    max-width: 557px;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.logo {
+    width: 203px;
+    height: auto;
+}
+
+.h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.h2 {
+    font-size: 24px;
+    line-height: 140%;
+}
+
+/* MAIN */
+
+.main {
+    width: 100%;
+    padding: 80px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+}
+
+.heading {
+    max-width: 593px;
+    text-align: center;
+}
+
+.h1-heading {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.h2-heading {
+    font-size: 24px;
+    line-height: 140%;
+}
+
+/* GRID */
+
+.items {
+    width: 100%;
+    max-width: 1216px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--gray);
+}
+
+.card-img img {
+    max-width: 225px;
+    width: 100%;
+    height: auto;
+}
+
+.detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.card-name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.card-type {
+    color: var(--brand-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card-price {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* =====================
+   TABLET
+   ===================== */
+
+@media (max-width: 1024px) {
+
+    .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jordan {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .h1 {
+        font-size: 28px;
+    }
+
+    .h2 {
+        font-size: 20px;
+    }
+}
+
+/* =====================
+   MOBILE
+   ===================== */
+
+@media (max-width: 768px) {
+
+    .frete {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .banner {
+        min-height: 320px;
+        padding: 24px;
+    }
+
+    .jordan {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .logo {
+        width: 160px;
+    }
+
+    .h1 {
+        font-size: 24px;
+    }
+
+    .h2 {
+        font-size: 18px;
+    }
+
+    .heading {
+        width: 100%;
+    }
+
+    .h1-heading {
+        font-size: 24px;
+    }
+
+    .h2-heading {
+        font-size: 18px;
+    }
+
+    .items {
+        grid-template-columns: 1fr;
+    }
+
+    .card-img {
+        height: 180px;
+    }
+
+    .card-price {
+        font-size: 18px;
+    }
+}
