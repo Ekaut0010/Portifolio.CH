@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Projetos e portfólio de Charlis - Desafios CodeLab, projetos pessoais e experimentos front-end.">
     <title>Projetos | Charlis.</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
@@ -16,70 +17,64 @@
 
 <body>
 
-    <div class="gradient gradient-1"></div>
-    <div class="gradient gradient-2"></div>
+    <div class="gradient gradient-1" aria-hidden="true"></div>
+    <div class="gradient gradient-2" aria-hidden="true"></div>
 
-    <nav class="navbar">
-        <a href="index.html" class="logo">
-            Charlis.
-        </a>
-
-        <div class="nav-links">
-            <a href="index.html">Início</a>
-            <a href="https://github.com/Ekaut0010" target="_blank">
-                GitHub
+    <header>
+        <nav class="navbar" aria-label="Navegação Principal">
+            <a href="index.html" class="logo" aria-label="Voltar para a página inicial">
+                Charlis.
             </a>
-            <a href="https://www.linkedin.com/in/charlis-eduardo-santos-de-souza-4b22863a7" target="_blank">
-                LinkedIn
-            </a>
-        </div>
-    </nav>
 
-    <header class="projects-hero">
-
-        <span class="badge">
-            ✦ Meu trabalho
-        </span>
-
-        <h1>
-            Projetos.
-        </h1>
-
-        <p>
-            Uma coleção dos desafios, estudos e experimentos
-            que fazem parte da minha evolução como desenvolvedor.
-        </p>
-
+            <div class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="https://github.com/Ekaut0010" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/charlis-eduardo-santos-de-souza-4b22863a7" target="_blank"
+                    rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+            </div>
+        </nav>
     </header>
 
     <main>
 
-        <!-- CodeLab -->
+        <section class="projects-hero" aria-label="Cabeçalho de Projetos">
+            <span class="badge" aria-hidden="true">
+                ✦ Meu trabalho
+            </span>
 
-        <section class="category">
+            <h1>
+                Projetos.
+            </h1>
+
+            <p>
+                Uma coleção dos desafios, estudos e experimentos
+                que fazem parte da minha evolução como desenvolvedor.
+            </p>
+        </section>
+
+        <section class="category" aria-labelledby="cat-codelab">
 
             <div class="category-header">
-
-                <span>01</span>
+                <span aria-hidden="true">01</span>
 
                 <div>
-                    <h2>CodeLab Challenges</h2>
-
+                    <h2 id="cat-codelab">CodeLab Challenges</h2>
                     <p>
                         Interfaces desenvolvidas a partir de protótipos do Figma.
                     </p>
                 </div>
-
             </div>
 
             <div class="projects-page-grid">
 
                 <article class="project-card">
-
-                    <img src="./img/BLOG.png" alt="Preview do Blog">
+                    <img src="./img/BLOG.png" alt="Preview da interface do projeto Blog" loading="lazy">
 
                     <div class="project-content">
-
                         <span>Challenge #01</span>
 
                         <h3>Blog</h3>
@@ -89,124 +84,98 @@
                             com HTML, CSS e JavaScript.
                         </p>
 
-                        <div class="techs">
+                        <div class="techs" aria-label="Tecnologias utilizadas">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
 
                         <div class="project-actions">
-
                             <a href="./desafio-1/">
                                 Projeto
                             </a>
-
-                            <a href="https://github.com/Ekaut0010/Desafios-Codelab/tree/main/desafio-1" target="_blank">
+                            <a href="https://github.com/Ekaut0010/Desafios-Codelab/tree/main/desafio-1" target="_blank"
+                                rel="noopener noreferrer">
                                 Código
                             </a>
-
                         </div>
-
                     </div>
-
                 </article>
 
                 <article class="project-card">
-
-                    <img src="./img/Jordan.png" alt="Preview do Blog">
+                    <img src="./img/Jordan.png" alt="Preview da interface da Landing Page Jordan Store" loading="lazy">
 
                     <div class="project-content">
-
                         <span>Challenge #02</span>
 
-                        <h3>Blog</h3>
+                        <h3>Jordan Store</h3>
 
                         <p>
                             Landing Page de uma loja de Tênis desenvolvida
-                            com HTML, CSS
+                            com HTML, CSS.
                         </p>
 
-                        <div class="techs">
+                        <div class="techs" aria-label="Tecnologias utilizadas">
                             <span>HTML</span>
                             <span>CSS</span>
                         </div>
 
                         <div class="project-actions">
-
                             <a href="./desafio-2/">
                                 Projeto
                             </a>
-
-                            <a href="https://github.com/Ekaut0010/Desafios-Codelab/tree/main/desafio-2" target="_blank">
+                            <a href="https://github.com/Ekaut0010/Desafios-Codelab/tree/main/desafio-2" target="_blank"
+                                rel="noopener noreferrer">
                                 Código
                             </a>
-
                         </div>
-
                     </div>
-
                 </article>
 
             </div>
 
         </section>
 
-        <!-- Projetos Pessoais -->
-
-        <section class="category">
+        <section class="category" aria-labelledby="cat-pessoais">
 
             <div class="category-header">
-
-                <span>02</span>
+                <span aria-hidden="true">02</span>
 
                 <div>
-                    <h2>Projetos Pessoais</h2>
-
+                    <h2 id="cat-pessoais">Projetos Pessoais</h2>
                     <p>
                         Ideias próprias que pretendo desenvolver.
                     </p>
                 </div>
-
             </div>
 
             <div class="empty-state">
-
                 <h3>Em breve.</h3>
-
                 <p>
                     Novos projetos serão adicionados aqui.
                 </p>
-
             </div>
 
         </section>
 
-        <!-- Experimentos -->
-
-        <section class="category">
+        <section class="category" aria-labelledby="cat-experimentos">
 
             <div class="category-header">
-
-                <span>03</span>
+                <span aria-hidden="true">03</span>
 
                 <div>
-                    <h2>Experimentos</h2>
-
+                    <h2 id="cat-experimentos">Experimentos</h2>
                     <p>
                         Testes de conceitos, animações e estudos.
                     </p>
                 </div>
-
             </div>
 
             <div class="empty-state">
-
                 <h3>Em breve.</h3>
-
                 <p>
                     Espaço reservado para explorações futuras.
                 </p>
-
             </div>
 
         </section>
@@ -214,8 +183,11 @@
     </main>
 
     <footer>
-        <a href="https://wa.me/5592999660378" target="_blank" class="btn-primary"><img id="zap" width="32" height="32"
-                src="https://img.icons8.com/ios/50/whatsapp--v1.png" alt="whatsapp--v1" /></a>
+        <a href="https://wa.me/5592999660378" target="_blank" rel="noopener noreferrer" class="btn-primary"
+            aria-label="Entrar em contato via WhatsApp">
+            <img id="zap" width="32" height="32" src="https://img.icons8.com/ios/50/whatsapp--v1.png"
+                alt="Ícone do WhatsApp" loading="lazy" />
+        </a>
         <p>
             © 2026 Charlis Eduardo
         </p>
