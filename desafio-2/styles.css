@@ -40,6 +40,10 @@ body {
 }
 
 .banner {
+    background-image: url("./img/image-michael-jordan.png");
+}
+
+.banner {
     width: 100%;
     min-height: 400px;
 
@@ -48,10 +52,10 @@ body {
 
     color: var(--white);
 
-    background-image: url("/desafio-2/img/image-michael-jordan.png");
     background-size: cover;
     background-position: top;
 }
+
 
 .jordan {
     max-width: 557px;
